@@ -30,7 +30,7 @@
   function buildByFirstAndRest(first, restsWithComma, restIndex) {
     if (!first) return [];
 
-    var rests = restsWithComma ? lodash.pluck(restsWithComma, restIndex) : [];
+    var rests = restsWithComma ? lodash.map(restsWithComma, restIndex) : [];
     return [first].concat(rests);
   }
 
@@ -54,9 +54,9 @@ typeExpr = notUnknownTypeExpr / unknownTypeExpr
 notUnknownTypeExpr = prefixModifiersWithWhiteSpaces:(prefixModifiers _)*
                      modifieeWithWhiteSpaces:modifiee _
                      postfixModifiersWithWhiteSpaces:(postfixModifiers _)* {
-    var prefixModifiers = lodash.pluck(prefixModifiersWithWhiteSpaces, 0);
+    var prefixModifiers = lodash.map(prefixModifiersWithWhiteSpaces, 0);
     var modifiee = modifieeWithWhiteSpaces;
-    var postfixModifiers = lodash.pluck(postfixModifiersWithWhiteSpaces, 0);
+    var postfixModifiers = lodash.map(postfixModifiersWithWhiteSpaces, 0);
 
     var modifiersOrderedByPriority = postfixModifiers.concat(reverse(prefixModifiers));
     var rootNode = modifiersOrderedByPriority.reduce(function(prevNode, operator) {

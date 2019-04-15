@@ -1,7 +1,7 @@
 {
   "name": "jsdoctypeparser",
   "description": "Strict JsDoc type expression parser.",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "Kuniwak <orga.chem.job@gmail.com>",
   "keywords": [
     "jsdoc",
@@ -10,11 +10,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/Kuniwak/jsdoctypeparser.git"
+    "url": "git://github.com/Alex314Ru/jsdoctypeparser.git"
   },
   "bugs": {
     "mail": "orga.chem.job@gmail.com",
-    "url": "https://github.com/Kuniwak/jsdoctypeparser/issues"
+    "url": "https://github.com/Alex314Ru/jsdoctypeparser/issues"
   },
   "directories": {
     "test": "test"
@@ -42,6 +42,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "lodash": "^3.7.0"
+    "lodash": "^4.17.11"
   }
 }
